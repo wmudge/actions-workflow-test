@@ -1,0 +1,19 @@
+---
+
+name: Test common scopes
+
+on:
+  release:
+    types: [published]
+  push:
+    branches: [devel]
+  workflow_dispatch:
+  
+jobs:
+  dispatch:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
