@@ -18,7 +18,7 @@ on:
       types: [published]  
 
 jobs:
-  checkout:
+  dump:
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
@@ -53,4 +53,3 @@ jobs:
           echo "The run id is: $GITHUB_RUN_ID"
           echo "The GitHub Actor's username is: $GITHUB_ACTOR"
           echo "GitHub SHA: $GITHUB_SHA"
-          
