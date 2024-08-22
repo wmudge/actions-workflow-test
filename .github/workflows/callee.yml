@@ -45,3 +45,15 @@ jobs:
           echo "The run id is: $GITHUB_RUN_ID"
           echo "The GitHub Actor's username is: $GITHUB_ACTOR"
           echo "GitHub SHA: $GITHUB_SHA"
+
+  script-dump:
+    permissions:
+      contents: read
+      pull-requests: read
+    runs-on: ubuntu-latest
+    steps:
+      # context.payload.pull_request.number
+      - name: Dump via script
+        uses: "actions/github-script@v7"
+        with:
+          script: console.log(context)
