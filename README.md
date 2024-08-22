@@ -18,5 +18,5 @@
 
 `caller.yml` can be invoked via several triggers. `callee.yml` executes when `caller.yml` completes.
 
-**Question: What contexts does `caller.yml` receive via the `workflow_run` trigger?**
+**Question: What contexts does `callee.yml` receive via the `workflow_run` trigger?**
 
